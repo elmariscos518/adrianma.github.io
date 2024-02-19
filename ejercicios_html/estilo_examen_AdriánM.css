@@ -1,0 +1,7 @@
+.body { background-color: rgb(217,179,255); }
+html{font-family: "Times New Roman", Times, serif;}
+#h1{color:orange; strong}
+#h2{color:blue; strong}
+#p{color: brown;}
+lista.ol{color: green;}
+lista.ul{color: red;}
