@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+
+<html lang="es"> 
+
+<head> 
+
+  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <title>Bucle for (tres programillas con formularios y botones)</title> 
+
+</head>
+
+<body> 
+
+<script>
+    function tablaMultiplicar() {
+        var num = parseInt(document.getElementById("numTable").value);
+        var result = "Tabla de multiplicar de " + num + ":<br>";
+        for (var i = 1; i <= 10; i++) {
+            result += num + " x " + i + " = " + (num * i) + "<br>";
+        }
+        document.getElementById("resultadoTabla").innerHTML = result;
+    }
+
+    function calcularFactorial() {
+        var num = parseInt(document.getElementById("numFactorial").value);
+        var factorial = 1;
+        for (var i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        document.getElementById("resultadoFactorial").innerText = "El factorial de " + num + " es: " + factorial;
+    }
+
+    function contarVocales() {
+        var texto = document.getElementById("textoVocales").value;
+        var count = 0;
+        for (var i = 0; i < texto.length; i++) {
+            var letra = texto.charAt(i).toLowerCase();
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                count++;
+            }
+        }
+        document.getElementById("resultadoVocales").innerText = "El número de vocales en la frase es: " + count;
+    }
+</script>
+
+<input type="text" id="numTable" placeholder="Ingresar un número"><button onclick="tablaMultiplicar()">Mostrar Tabla de Multiplicar</button><br>
+<input type="text" id="numFactorial" placeholder="Ingresa un número"><button onclick="calcularFactorial()">Calcular Factorial</button><br>
+<input type="text" id="textoVocales" placeholder="Ingresa una palabra o frase"><button onclick="contarVocales()">Contar Vocales</button><br>
+
+<div id="resultadoTabla"></div>
+<div id="resultadoFactorial"></div>
+<div id="resultadoVocales"></div>
+  
+</script>
+</body>
+</html>
