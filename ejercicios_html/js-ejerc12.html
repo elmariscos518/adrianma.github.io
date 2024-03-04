@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h1> Cambiamos document.write() por escribir en un elemento cualquiera</h1>
+
+<p id="modi">Este es el párrafo a modificar </p>
+
+<script>
+
+const modi = document.getElementById("modi");
+
+const nuevoParrafo = document.createElement("p");
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+
+
+
+    nuevoParrafo.textContent = `Este es un nuevo párrafo agregado dinámicamente ${i}.`;
+
+        modi.appendChild(nuevoParrafo);
+
+    }
+
+}
+
+</script>
+
+</body>
